@@ -9,6 +9,12 @@
 #ifndef column_def_hpp
 #define column_def_hpp
 
-#include <stdio.h>
+#include "column.hpp"
+
+class ColumnDef : public Describable
+{
+public:
+    ColumnDef(const Column &column, ColumnType type);
+};
 
 #endif /* column_def_hpp */

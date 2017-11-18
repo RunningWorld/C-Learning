@@ -7,3 +7,28 @@
 //
 
 #include "describable.hpp"
+
+
+Describable::Describable(const std::string &description)
+: m_description(description)
+{
+}
+
+Describable::Describable(const char *description) : m_description(description)
+{
+}
+
+const std::string &Describable::getDescription() const
+{
+    return m_description;
+}
+
+bool Describable::isEmpty() const
+{
+    return m_description.empty();
+}
+
+Describable::operator const std::string &() const
+{
+    return m_description;
+}

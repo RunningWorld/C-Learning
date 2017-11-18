@@ -8,8 +8,9 @@
 
 #ifndef XXTDeclare_h
 #define XXTDeclare_h
+
+#include "column_type.h"
 #import <Foundation/Foundation.h>
-#import "column_type.h"
 
 typedef NS_ENUM(int, XXTColumnType) {
     XXTColumnTypeInteger32 = (XXTColumnType) ColumnType::Integer32,
@@ -20,6 +21,5 @@ typedef NS_ENUM(int, XXTColumnType) {
     XXTColumnTypeNil = (XXTColumnType) ColumnType::Null,
 };
 
-typedef ColumnDef XXTColumnDef;
 
 #endif /* XXTDeclare_h */

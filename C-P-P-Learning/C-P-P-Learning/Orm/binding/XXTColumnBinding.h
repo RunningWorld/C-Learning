@@ -12,6 +12,10 @@
 
 #include "XXTCppAccessor.h"
 #import "XXCommonHeader.h"
+#include "XXTBaseAccessor.h"
+#include "XXTDeclare.h"
+#include "declare.hpp"
+#include "column_def.hpp"
 
 class XXTColumnBinding {
 public:
@@ -26,7 +30,7 @@ public:
     }
     
     const std::string columnName;
-    const std::shared_ptr<WCTBaseAccessor> accessor;
+    const std::shared_ptr<XXTBaseAccessor> accessor;
     
 protected:
     XXTColumnDef m_columnDef;

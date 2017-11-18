@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4CE2B151FC0746E00F827E2 /* declare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4CE2B131FC0746E00F827E2 /* declare.cpp */; };
 		D4D8417E1FB40B520099841A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D8417D1FB40B520099841A /* main.cpp */; };
 		D4D841911FB46AAD0099841A /* enable_if_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D8418F1FB46AAD0099841A /* enable_if_test.cpp */; };
 		D4D841991FB546330099841A /* XXTBinding.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D841961FB546330099841A /* XXTBinding.mm */; };
@@ -14,6 +15,7 @@
 		D4D841A21FB54C7B0099841A /* column_type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D841A01FB54C7B0099841A /* column_type.cpp */; };
 		D4D841A71FB551160099841A /* column_def.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D841A51FB551160099841A /* column_def.cpp */; };
 		D4D841AA1FB555BE0099841A /* describable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D841A81FB555BE0099841A /* describable.cpp */; };
+		D4D841AE1FB5A06D0099841A /* column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D841AC1FB5A06D0099841A /* column.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D4CE2B111FBEE04F00F827E2 /* operator-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "operator-Read.h"; sourceTree = "<group>"; };
+		D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "explicit-Read.h"; sourceTree = "<group>"; };
+		D4CE2B131FC0746E00F827E2 /* declare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = declare.cpp; sourceTree = "<group>"; };
+		D4CE2B141FC0746E00F827E2 /* declare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = declare.hpp; sourceTree = "<group>"; };
 		D4D8417A1FB40B520099841A /* C-P-P-Learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C-P-P-Learning"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D8417D1FB40B520099841A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D4D841891FB4308F0099841A /* typeName-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "typeName-Read.h"; sourceTree = "<group>"; };
@@ -47,11 +53,14 @@
 		D4D841A01FB54C7B0099841A /* column_type.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = column_type.cpp; sourceTree = "<group>"; };
 		D4D841A11FB54C7B0099841A /* column_type.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = column_type.hpp; sourceTree = "<group>"; };
 		D4D841A31FB54CF80099841A /* column_type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = column_type.h; sourceTree = "<group>"; };
-		D4D841A41FB54DF30099841A /* constexpr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constexpr.h; sourceTree = "<group>"; };
+		D4D841A41FB54DF30099841A /* const-constexpr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "const-constexpr.h"; sourceTree = "<group>"; };
 		D4D841A51FB551160099841A /* column_def.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = column_def.cpp; sourceTree = "<group>"; };
 		D4D841A61FB551160099841A /* column_def.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = column_def.hpp; sourceTree = "<group>"; };
 		D4D841A81FB555BE0099841A /* describable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = describable.cpp; sourceTree = "<group>"; };
 		D4D841A91FB555BE0099841A /* describable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = describable.hpp; sourceTree = "<group>"; };
+		D4D841AB1FB5582A0099841A /* std_string-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "std_string-Read.h"; sourceTree = "<group>"; };
+		D4D841AC1FB5A06D0099841A /* column.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = column.cpp; sourceTree = "<group>"; };
+		D4D841AD1FB5A06D0099841A /* column.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = column.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +114,15 @@
 		D4D841881FB4306E0099841A /* C++ Read */ = {
 			isa = PBXGroup;
 			children = (
+				D4CE2B111FBEE04F00F827E2 /* operator-Read.h */,
 				D4D841891FB4308F0099841A /* typeName-Read.h */,
 				D4D8418D1FB432B20099841A /* std-Read.h */,
 				D4D841901FB46AAD0099841A /* enable_if_test.h */,
 				D4D8418F1FB46AAD0099841A /* enable_if_test.cpp */,
 				D4D841921FB46C650099841A /* Template-Read.hpp */,
-				D4D841A41FB54DF30099841A /* constexpr.h */,
+				D4D841A41FB54DF30099841A /* const-constexpr.h */,
+				D4D841AB1FB5582A0099841A /* std_string-Read.h */,
+				D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */,
 			);
 			path = "C++ Read";
 			sourceTree = "<group>";
@@ -140,12 +152,16 @@
 			children = (
 				D4D8419F1FB54A0F0099841A /* XXTDeclare.h */,
 				D4D841A01FB54C7B0099841A /* column_type.cpp */,
-				D4D841A11FB54C7B0099841A /* column_type.hpp */,
 				D4D841A31FB54CF80099841A /* column_type.h */,
+				D4D841A11FB54C7B0099841A /* column_type.hpp */,
 				D4D841A51FB551160099841A /* column_def.cpp */,
 				D4D841A61FB551160099841A /* column_def.hpp */,
 				D4D841A81FB555BE0099841A /* describable.cpp */,
 				D4D841A91FB555BE0099841A /* describable.hpp */,
+				D4D841AC1FB5A06D0099841A /* column.cpp */,
+				D4D841AD1FB5A06D0099841A /* column.hpp */,
+				D4CE2B131FC0746E00F827E2 /* declare.cpp */,
+				D4CE2B141FC0746E00F827E2 /* declare.hpp */,
 			);
 			path = declare;
 			sourceTree = "<group>";
@@ -207,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CE2B151FC0746E00F827E2 /* declare.cpp in Sources */,
 				D4D8419A1FB546330099841A /* XXTColumnBinding.mm in Sources */,
+				D4D841AE1FB5A06D0099841A /* column.cpp in Sources */,
 				D4D8417E1FB40B520099841A /* main.cpp in Sources */,
 				D4D841991FB546330099841A /* XXTBinding.mm in Sources */,
 				D4D841911FB46AAD0099841A /* enable_if_test.cpp in Sources */,

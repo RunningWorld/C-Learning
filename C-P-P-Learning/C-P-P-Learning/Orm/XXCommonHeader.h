@@ -13,7 +13,4 @@
 #include <memory.h>
 #include <type_traits>
 
-#import "XXDeclare.h"
-#import <Foundation/Foundation.h>
-
 #endif /* XXCommonHeader_h */

@@ -44,6 +44,17 @@
  constexpr const int *p = &i; // const pointer, const data
  constexpr int *p1 = &j; // const pointer, non-const data
  
+ const
+ 
+ 我们可以定义CONST对象如：
+ const   INT  I=10;
+ 同理我们可以定义引用来绑定到这个CONST对象  如：
+ INT & REFI =I；(2)
+ 比较(1)(2)两个表达式，是一样的，也就是说在表达式(2) 定义完之后，我们同样可以通过REFI 改变 I的值。这与我们的I 被定义成 CONST 是相违背的。所以我们规定:
+ 将非CONST引用绑定到CONST对象是不合法的。
+ CONST引用可以初始化为不同类型的对象或者右值，如字面值常量。
+ 
+ 
  */
 
 #endif /* constexpr_h */

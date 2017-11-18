@@ -19,8 +19,13 @@ public:
     static std::string GetListDescription(const std::list<const T> &t)
     {
         std::string s;
-        
+        GetDescription(t, s);
     }
+    
+    const std::string &getDescription() const;
+    bool isEmpty() const;
+    explicit operator const std::string &() const;
+    
 protected:
     template <typename T>
     static void GetDescription(const std::list<const T> &list , std::string &output)
@@ -35,6 +40,11 @@ protected:
             output.append(std::string(t));
         }
     }
+    
+    Describable(const std::string &description);
+    Describable(const char *description);
+    
+    std::string m_description;
 };
 
 #endif /* describable_hpp */
