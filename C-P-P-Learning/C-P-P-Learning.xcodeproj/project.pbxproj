@@ -35,6 +35,10 @@
 		D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "explicit-Read.h"; sourceTree = "<group>"; };
 		D4CE2B131FC0746E00F827E2 /* declare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = declare.cpp; sourceTree = "<group>"; };
 		D4CE2B141FC0746E00F827E2 /* declare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = declare.hpp; sourceTree = "<group>"; };
+		D4D08D731FC8222100CBBA42 /* XXTCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXTCoding.h; sourceTree = "<group>"; };
+		D4D08D751FC827B700CBBA42 /* util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = util.hpp; sourceTree = "<group>"; };
+		D4D08D761FC9A6A900CBBA42 /* decltype-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "decltype-Read.h"; sourceTree = "<group>"; };
+		D4D08D771FC9AB1800CBBA42 /* false_type_read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = false_type_read.h; sourceTree = "<group>"; };
 		D4D8417A1FB40B520099841A /* C-P-P-Learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C-P-P-Learning"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D8417D1FB40B520099841A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D4D841891FB4308F0099841A /* typeName-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "typeName-Read.h"; sourceTree = "<group>"; };
@@ -74,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4D08D721FC821FD00CBBA42 /* coding */ = {
+			isa = PBXGroup;
+			children = (
+				D4D08D731FC8222100CBBA42 /* XXTCoding.h */,
+			);
+			path = coding;
+			sourceTree = "<group>";
+		};
+		D4D08D741FC8279900CBBA42 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D4D08D751FC827B700CBBA42 /* util.hpp */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		D4D841711FB40B520099841A = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,8 @@
 		D4D841841FB42D580099841A /* Orm */ = {
 			isa = PBXGroup;
 			children = (
+				D4D08D741FC8279900CBBA42 /* util */,
+				D4D08D721FC821FD00CBBA42 /* coding */,
 				D4D8419E1FB549F80099841A /* declare */,
 				D4D841931FB546330099841A /* accessor */,
 				D4D841941FB546330099841A /* binding */,
@@ -123,6 +145,8 @@
 				D4D841A41FB54DF30099841A /* const-constexpr.h */,
 				D4D841AB1FB5582A0099841A /* std_string-Read.h */,
 				D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */,
+				D4D08D761FC9A6A900CBBA42 /* decltype-Read.h */,
+				D4D08D771FC9AB1800CBBA42 /* false_type_read.h */,
 			);
 			path = "C++ Read";
 			sourceTree = "<group>";

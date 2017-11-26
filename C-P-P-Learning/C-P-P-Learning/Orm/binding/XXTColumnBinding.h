@@ -25,7 +25,10 @@ public:
                      const std::string &pn,
                      const std::string &cn,
                      T * = nullptr, typename std::enable_if<ColumnIsCppType<T>::value>::type * = nullptr)
-    : columnName(cn) , m_columnDef(cn, (ColumnType) accessor->getColumnType())
+    : columnName(cn) 
+    , m_columnDef(cn, (ColumnType) accessor->getColumnType()) 
+    , m_isAutoIncrement(false)
+    , m_isPrimary(false)
     {
     }
     
@@ -33,6 +36,8 @@ public:
     const std::shared_ptr<XXTBaseAccessor> accessor;
     
 protected:
+    bool m_isPrimary;
+    bool m_isAutoIncrement;
     XXTColumnDef m_columnDef;
 };
 

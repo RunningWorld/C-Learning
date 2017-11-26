@@ -11,6 +11,9 @@
 
 #include "column_type.h"
 #import <Foundation/Foundation.h>
+#include <map>
+#include <list>
+#include "util.hpp"
 
 typedef NS_ENUM(int, XXTColumnType) {
     XXTColumnTypeInteger32 = (XXTColumnType) ColumnType::Integer32,
@@ -21,5 +24,14 @@ typedef NS_ENUM(int, XXTColumnType) {
     XXTColumnTypeNil = (XXTColumnType) ColumnType::Null,
 };
 
+class XXTColumnBinding;
+
+//Case insensitive
+typedef std::map<std::string,
+std::shared_ptr<XXTColumnBinding>,
+CaseInsensiveComparetor>
+XXTColumnBindingMap;
+
+typedef std::list<std::shared_ptr<XXTColumnBinding>> XXTColumnBindingList;
 
 #endif /* XXTDeclare_h */
