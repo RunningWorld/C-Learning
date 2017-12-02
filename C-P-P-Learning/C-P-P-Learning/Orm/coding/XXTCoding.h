@@ -15,7 +15,7 @@
 
 @end
 
-@protocol WCTColumnCoding
+@protocol XXTColumnCoding
 
 
 

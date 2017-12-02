@@ -9,6 +9,7 @@
 #include <iostream>
 #import "XXTDeclare.h"
 #include "column_type.hpp"
+#import "XXTBaseAccessor.h"
 
 #ifndef XXTCppAccessor_h
 #define XXTCppAccessor_h
@@ -22,5 +23,31 @@ typename std::enable_if<ColumnInfo<T>::type !=
     ColumnType::Null>::type>
 : public std::true_type {
 };
+
+template <XXTColumnType t>
+class XXTCppAccessor : public XXTBaseAccessor {
+public:
+    using CType = typename ColumnTypeInfo<(ColumnType)t>::CType;
+    using Setter = void (^)(InstanceType, CType);
+    using Getter = CType (^)(InstanceType);
+    
+    XXTCppAccessor(Getter getter, Setter setter)
+    : getValue(getter), setValue(setter)
+    {
+    }
+    
+    virtual XXTColumnType getColumnType() const override
+    {
+        return (XXTColumnType) t;
+    };
+    virtual XXTAccessorType getAccessorType() const override
+    {
+        return XXTAccessorCpp;
+    }
+    
+    const Setter setValue;
+    const Getter getValue;
+};
+
 
 #endif /* XXTCppAccessor_h */

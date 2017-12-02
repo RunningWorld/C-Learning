@@ -16,6 +16,7 @@
 #include "XXTDeclare.h"
 #include "declare.hpp"
 #include "column_def.hpp"
+#import "XXTRuntimeObjCAccessor.h"
 
 class XXTColumnBinding {
 public:
@@ -24,11 +25,13 @@ public:
                      Class cls,
                      const std::string &pn,
                      const std::string &cn,
-                     T * = nullptr, typename std::enable_if<ColumnIsCppType<T>::value>::type * = nullptr)
-    : columnName(cn) 
-    , m_columnDef(cn, (ColumnType) accessor->getColumnType()) 
-    , m_isAutoIncrement(false)
-    , m_isPrimary(false)
+                     T * = nullptr,
+                     typename std::enable_if<ColumnIsCppType<T>::value>::type * = nullptr)
+                     : columnName(cn)
+                     , accessor(new XXTRuntimeObjCAccessor(cls, pn))
+                     , m_columnDef(cn, (ColumnType) accessor->getColumnType())
+                     , m_isAutoIncrement(false)
+                     , m_isPrimary(false)
     {
     }
     

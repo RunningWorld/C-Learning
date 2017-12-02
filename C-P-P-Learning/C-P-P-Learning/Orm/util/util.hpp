@@ -9,7 +9,7 @@
 #ifndef util_hpp
 #define util_hpp
 
-#include <string.h>
+#include <string>
 
 struct CaseInsensiveComparetor {
     bool operator()(const std::string &lhs, const std::string &rhs) const

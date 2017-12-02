@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D48095DF1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D48095DD1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D48095E31FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D48095E21FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.mm */; };
 		D4CE2B151FC0746E00F827E2 /* declare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4CE2B131FC0746E00F827E2 /* declare.cpp */; };
 		D4D8417E1FB40B520099841A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D8417D1FB40B520099841A /* main.cpp */; };
 		D4D841911FB46AAD0099841A /* enable_if_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D8418F1FB46AAD0099841A /* enable_if_test.cpp */; };
@@ -31,6 +33,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D48095DB1FD2E7A300EBD157 /* XXTRuntimeCppAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXTRuntimeCppAccessor.h; sourceTree = "<group>"; };
+		D48095DD1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XXTRuntimeBaseAccessor.mm; sourceTree = "<group>"; };
+		D48095DE1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXTRuntimeBaseAccessor.h; sourceTree = "<group>"; };
+		D48095E01FD2E89500EBD157 /* XXTObjCAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXTObjCAccessor.h; sourceTree = "<group>"; };
+		D48095E11FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXTRuntimeObjCAccessor.h; sourceTree = "<group>"; };
+		D48095E21FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XXTRuntimeObjCAccessor.mm; sourceTree = "<group>"; };
+		D48095E41FD2F3E800EBD157 /* true_false_type-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "true_false_type-Read.h"; sourceTree = "<group>"; };
+		D48095E51FD2F40B00EBD157 /* is_convertible-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "is_convertible-Read.h"; sourceTree = "<group>"; };
 		D4CE2B111FBEE04F00F827E2 /* operator-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "operator-Read.h"; sourceTree = "<group>"; };
 		D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "explicit-Read.h"; sourceTree = "<group>"; };
 		D4CE2B131FC0746E00F827E2 /* declare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = declare.cpp; sourceTree = "<group>"; };
@@ -147,6 +157,8 @@
 				D4CE2B121FC06EAF00F827E2 /* explicit-Read.h */,
 				D4D08D761FC9A6A900CBBA42 /* decltype-Read.h */,
 				D4D08D771FC9AB1800CBBA42 /* false_type_read.h */,
+				D48095E41FD2F3E800EBD157 /* true_false_type-Read.h */,
+				D48095E51FD2F40B00EBD157 /* is_convertible-Read.h */,
 			);
 			path = "C++ Read";
 			sourceTree = "<group>";
@@ -156,6 +168,12 @@
 			children = (
 				D4D8419B1FB546B90099841A /* XXTCppAccessor.h */,
 				D4D8419D1FB5494A0099841A /* XXTBaseAccessor.h */,
+				D48095E01FD2E89500EBD157 /* XXTObjCAccessor.h */,
+				D48095DB1FD2E7A300EBD157 /* XXTRuntimeCppAccessor.h */,
+				D48095DE1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.h */,
+				D48095DD1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.mm */,
+				D48095E11FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.h */,
+				D48095E21FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.mm */,
 			);
 			path = accessor;
 			sourceTree = "<group>";
@@ -248,10 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CE2B151FC0746E00F827E2 /* declare.cpp in Sources */,
+				D48095E31FD2E9DC00EBD157 /* XXTRuntimeObjCAccessor.mm in Sources */,
 				D4D8419A1FB546330099841A /* XXTColumnBinding.mm in Sources */,
 				D4D841AE1FB5A06D0099841A /* column.cpp in Sources */,
 				D4D8417E1FB40B520099841A /* main.cpp in Sources */,
 				D4D841991FB546330099841A /* XXTBinding.mm in Sources */,
+				D48095DF1FD2E80D00EBD157 /* XXTRuntimeBaseAccessor.mm in Sources */,
 				D4D841911FB46AAD0099841A /* enable_if_test.cpp in Sources */,
 				D4D841A21FB54C7B0099841A /* column_type.cpp in Sources */,
 				D4D841AA1FB555BE0099841A /* describable.cpp in Sources */,
