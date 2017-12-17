@@ -8,6 +8,7 @@
 
 #import "XXTRuntimeObjCAccessor.h"
 #import "XXTCoding.h"
+#include "error.hpp"
 
 XXTRuntimeObjCAccessor::XXTRuntimeObjCAccessor(Class instanceClass, const std::string &propertyName)
 : XXTRuntimeAccessor<id>(instanceClass, propertyName)
@@ -16,7 +17,7 @@ XXTRuntimeObjCAccessor::XXTRuntimeObjCAccessor(Class instanceClass, const std::s
 {
     Class propertyClass = GetPropertyClass(instanceClass, propertyName);
     if (![propertyClass conformsToProtocol:@protocol(XXTColumnCoding)]) {
-//        Error::Abort([NSString stringWithFormat:@"Class %@ should conforms to protocol XXTColumnCoding", NSStringFromClass(propertyClass)].UTF8String);
+        SNS::Error::Abort([NSString stringWithFormat:@"Class %@ should conforms to protocol XXTColumnCoding", NSStringFromClass(propertyClass)].UTF8String);
     }
 }
 
@@ -54,7 +55,7 @@ XXTColumnType XXTRuntimeObjCAccessor::GetColumnType(Class instanceClass, const s
     static const SEL ColumnTypeSelector = NSSelectorFromString(@"columnTypeForXXDB");
     Class propertyClass = GetPropertyClass(instanceClass, propertyName);
     if (![propertyClass conformsToProtocol:@protocol(XXTColumnCoding)]) {
-//        XXDB::Error::Abort([NSString stringWithFormat:@"[%@] should conform to XXTColumnCoding protocol, which is the class of [%@ %s]", NSStringFromClass(propertyClass), NSStringFromClass(instanceClass), propertyName.c_str()].UTF8String);
+//        XXDB::Abort([NSString stringWithFormat:@"[%@] should conform to XXTColumnCoding protocol, which is the class of [%@ %s]", NSStringFromClass(propertyClass), NSStringFromClass(instanceClass), propertyName.c_str()].UTF8String);
     }
     IMP implementation = GetClassMethodImplementation(propertyClass, ColumnTypeSelector);
     using GetColumnTyper = XXTColumnType (*)(Class, SEL);

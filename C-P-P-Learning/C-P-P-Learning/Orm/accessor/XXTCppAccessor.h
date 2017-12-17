@@ -19,15 +19,15 @@ struct ColumnIsCppType : public std::false_type {};
 
 template <typename T>
 struct ColumnIsCppType<T,
-typename std::enable_if<ColumnInfo<T>::type !=
-    ColumnType::Null>::type>
+typename std::enable_if<SNS::ColumnInfo<T>::type !=
+    SNS::ColumnType::Null>::type>
 : public std::true_type {
 };
 
 template <XXTColumnType t>
 class XXTCppAccessor : public XXTBaseAccessor {
 public:
-    using CType = typename ColumnTypeInfo<(ColumnType)t>::CType;
+    using CType = typename SNS::ColumnTypeInfo<(SNS::ColumnType)t>::CType;
     using Setter = void (^)(InstanceType, CType);
     using Getter = CType (^)(InstanceType);
     

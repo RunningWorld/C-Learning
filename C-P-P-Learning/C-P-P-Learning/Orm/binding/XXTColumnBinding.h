@@ -10,13 +10,12 @@
 #define XXTColumnBinding_hpp
 
 
-#include "XXTCppAccessor.h"
+#import "XXTCppAccessor.h"
 #import "XXCommonHeader.h"
-#include "XXTBaseAccessor.h"
-#include "XXTDeclare.h"
-#include "declare.hpp"
-#include "column_def.hpp"
+#import "XXTBaseAccessor.h"
+#import "XXTDeclare.h"
 #import "XXTRuntimeObjCAccessor.h"
+#include "column_def.hpp"
 
 class XXTColumnBinding {
 public:
@@ -29,7 +28,7 @@ public:
                      typename std::enable_if<ColumnIsCppType<T>::value>::type * = nullptr)
                      : columnName(cn)
                      , accessor(new XXTRuntimeObjCAccessor(cls, pn))
-                     , m_columnDef(cn, (ColumnType) accessor->getColumnType())
+                     , m_columnDef(cn, (SNS::ColumnType) accessor->getColumnType())
                      , m_isAutoIncrement(false)
                      , m_isPrimary(false)
     {
@@ -41,7 +40,7 @@ public:
 protected:
     bool m_isPrimary;
     bool m_isAutoIncrement;
-    XXTColumnDef m_columnDef;
+    SNS::ColumnDef m_columnDef;
 };
 
 #endif /* XXTColumnBinding_hpp */

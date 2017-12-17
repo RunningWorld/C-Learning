@@ -9,19 +9,19 @@
 #ifndef XXTDeclare_h
 #define XXTDeclare_h
 
-#include "column_type.h"
 #import <Foundation/Foundation.h>
 #include <map>
 #include <list>
-#include "util.hpp"
+#include "utility.hpp"
+#include "column_type.hpp"
 
 typedef NS_ENUM(int, XXTColumnType) {
-    XXTColumnTypeInteger32 = (XXTColumnType) ColumnType::Integer32,
-    XXTColumnTypeInteger64 = (XXTColumnType) ColumnType::Integer64,
-    XXTColumnTypeDouble = (XXTColumnType) ColumnType::Float,
-    XXTColumnTypeString = (XXTColumnType) ColumnType::Text,
-    XXTColumnTypeBinary = (XXTColumnType) ColumnType::BLOB,
-    XXTColumnTypeNil = (XXTColumnType) ColumnType::Null,
+    XXTColumnTypeInteger32 = (XXTColumnType) SNS::ColumnType::Integer32,
+    XXTColumnTypeInteger64 = (XXTColumnType) SNS::ColumnType::Integer64,
+    XXTColumnTypeDouble = (XXTColumnType) SNS::ColumnType::Float,
+    XXTColumnTypeString = (XXTColumnType) SNS::ColumnType::Text,
+    XXTColumnTypeBinary = (XXTColumnType) SNS::ColumnType::BLOB,
+    XXTColumnTypeNil = (XXTColumnType) SNS::ColumnType::Null,
 };
 
 class XXTColumnBinding;
@@ -29,7 +29,7 @@ class XXTColumnBinding;
 //Case insensitive
 typedef std::map<std::string,
 std::shared_ptr<XXTColumnBinding>,
-CaseInsensiveComparetor>
+SNS::CaseInsensiveComparetor>
 XXTColumnBindingMap;
 
 typedef std::list<std::shared_ptr<XXTColumnBinding>> XXTColumnBindingList;
